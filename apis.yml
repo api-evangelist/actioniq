@@ -1,0 +1,92 @@
+aid: actioniq
+name: ActionIQ
+description: >-
+  ActionIQ is an enterprise customer data platform (CDP) that provides a REST
+  API for managing customer profiles, building audiences, orchestrating
+  campaigns, and activating data across marketing channels. The platform offers
+  a Profile API for real-time personalization, enabling businesses to access
+  customer identities, attributes, and audience membership within milliseconds
+  to power web personalization, call center decisioning, and real-time customer
+  experiences. ActionIQ was acquired by Uniphore in December 2024 and is now
+  offered as part of Uniphore's composable CDP platform.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/apis.yml
+created: "2026-06-13"
+modified: "2026-06-13"
+specificationVersion: "0.19"
+tags:
+  - Customer Data Platform
+  - CDP
+  - Audience Management
+  - Real-Time Personalization
+  - Marketing Orchestration
+  - Data Activation
+  - Enterprise
+  - REST API
+apis:
+  - aid: actioniq:profile-api
+    name: ActionIQ Profile API
+    description: >-
+      The ActionIQ Profile API provides real-time access to customer identities,
+      attributes, and audience membership within milliseconds. It powers
+      inbound decisioning use cases such as web personalization and call center
+      support, connecting data warehouse intelligence directly to customer
+      experience applications. The API supports integration with personalization
+      engines including Adobe Target and Moveable Ink.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.actioniq.com/blog/actioniq-profile-api/
+    baseURL: https://api.actioniq.com
+    tags:
+      - Profile
+      - Real-Time Personalization
+      - Audience
+      - Customer Data
+    properties:
+      - type: Documentation
+        url: https://www.actioniq.com/library/
+      - type: Authentication
+        url: https://www.actioniq.com/security/
+  - aid: actioniq:data-ingestion-api
+    name: ActionIQ Data Ingestion API
+    description: >-
+      ActionIQ provides a real-time REST API endpoint for streaming customer
+      event data into the platform. The ingestion API supports push-based
+      streaming from in-house systems, enabling businesses to capture real-time
+      clickstream events and other behavioral data for immediate use in audience
+      segmentation and campaign orchestration.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.actioniq.com/library/
+    baseURL: https://api.actioniq.com
+    tags:
+      - Data Ingestion
+      - Streaming
+      - Events
+      - REST
+    properties:
+      - type: Documentation
+        url: https://www.actioniq.com/library/
+common:
+  - type: Website
+    url: https://www.actioniq.com
+  - type: Documentation
+    url: https://www.actioniq.com/library/
+  - type: GitHubOrg
+    url: https://github.com/ActionIQ
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/actioniq
+  - type: Blog
+    url: https://www.actioniq.com/blog/
+  - type: Pricing
+    url: https://www.g2.com/products/actioniq/pricing
+  - type: X
+    url: https://twitter.com/actioniqinc
+  - type: Plans
+    url: plans/actioniq-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/actioniq-rate-limits.yml
+  - type: FinOps
+    url: finops/actioniq-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

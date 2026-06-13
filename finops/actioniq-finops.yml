@@ -1,0 +1,78 @@
+name: ActionIQ FinOps Framework
+description: >-
+  FinOps considerations for ActionIQ's enterprise customer data platform API
+  usage. ActionIQ operates on a custom enterprise pricing model without
+  publicly disclosed unit rates, making traditional FinOps cost optimization
+  practices dependent on contract negotiation and internal usage governance.
+  Following Uniphore's acquisition of ActionIQ in December 2024, cost
+  management is now part of Uniphore's broader enterprise platform pricing.
+specificationVersion: "1.0"
+framework: FinOps Foundation FOCUS 1.0
+focusAlignment:
+  - domain: Understanding Cloud Usage and Cost
+    description: >-
+      ActionIQ costs are not metered in real-time like traditional cloud
+      infrastructure. Enterprise contracts typically include a platform fee
+      covering a defined volume of profiles, API calls, and data activations.
+      Teams should track API call volumes and profile counts relative to
+      contracted limits to forecast contract renewal costs.
+    recommendations:
+      - Monitor Profile API call volumes against contracted capacity
+      - Track number of active customer profiles managed in the platform
+      - Measure audience activations per channel per billing period
+      - Log data ingestion volumes (events and records per day)
+  - domain: Performance Tracking and Benchmarking
+    description: >-
+      Performance benchmarking for ActionIQ should focus on value metrics
+      tied to marketing outcomes rather than infrastructure spend, as the
+      platform is consumed as an enterprise SaaS service with fixed contract
+      pricing.
+    recommendations:
+      - Benchmark cost-per-profile against industry CDP peers
+      - Measure ROI of real-time personalization campaigns powered by the Profile API
+      - Track audience activation rates and downstream conversion impact
+      - Evaluate cost of integrations relative to revenue attribution
+  - domain: Real-Time Decision Making
+    description: >-
+      ActionIQ's Profile API is positioned for real-time decisioning scenarios.
+      From a FinOps perspective, organizations should evaluate whether
+      real-time Profile API access is required for all use cases or if
+      batch-based alternatives reduce costs at contract renewal.
+    recommendations:
+      - Identify which use cases require real-time Profile API vs batch audience exports
+      - Evaluate channel activation costs relative to downstream platform fees
+      - Assess data warehouse query costs associated with ActionIQ JDBC integrations
+  - domain: Organizational Alignment
+    description: >-
+      As an enterprise platform acquired by Uniphore, ActionIQ costs typically
+      sit within marketing technology or data platform budgets. FinOps
+      alignment requires coordination between marketing ops, data engineering,
+      and finance teams.
+    recommendations:
+      - Assign API usage ownership to marketing operations or data platform team
+      - Establish chargeback model if multiple business units share the CDP
+      - Review contract terms annually against actual profile and activation volumes
+      - Evaluate Uniphore bundle pricing vs standalone CDP costs post-acquisition
+costCategories:
+  - name: Platform License Fee
+    type: fixed
+    description: Annual or multi-year enterprise contract for platform access
+    publiclyDisclosed: false
+  - name: Profile Volume
+    type: variable
+    description: Cost based on number of customer profiles managed in the platform
+    publiclyDisclosed: false
+  - name: API Calls
+    type: variable
+    description: Profile API and ingestion API call volume may affect contract tiers
+    publiclyDisclosed: false
+  - name: Channel Activations
+    type: variable
+    description: Data activations to downstream marketing channels and platforms
+    publiclyDisclosed: false
+  - name: Implementation and Onboarding
+    type: one-time
+    description: Professional services for initial platform deployment and integration
+    publiclyDisclosed: false
+contact:
+  url: https://www.uniphore.com/contact/

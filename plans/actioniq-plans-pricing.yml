@@ -1,0 +1,45 @@
+name: ActionIQ Plans and Pricing
+description: >-
+  ActionIQ uses an enterprise-tier, custom pricing model based on platform fees
+  plus usage. Pricing is not publicly disclosed and requires direct engagement
+  with the ActionIQ/Uniphore sales team for a custom quote. As an
+  enterprise-only platform acquired by Uniphore in December 2024, pricing is
+  tailored to organizational scale, data volumes, and feature requirements.
+specificationVersion: "0.1"
+plans:
+  - name: Enterprise
+    description: >-
+      ActionIQ's primary offering is an enterprise plan targeting large
+      organizations requiring a composable customer data platform. Pricing is
+      custom and based on data volumes, number of profiles, channels activated,
+      and feature modules selected including the Profile API, ActionIQ Tag, and
+      Triggers for real-time customer experience orchestration.
+    type: enterprise
+    pricing:
+      model: custom
+      currency: USD
+      billingPeriod: annual
+      publiclyDisclosed: false
+    features:
+      - Customer profile management
+      - Real-time Profile API access
+      - Audience segmentation and activation
+      - Campaign orchestration
+      - ActionIQ Tag for event collection
+      - ActionIQ Triggers for outbound campaigns
+      - Data warehouse integration
+      - 38+ pre-built integrations
+      - SFTP, S3, and GCS file transfer
+      - JDBC pull-based direct query
+      - REST API streaming ingestion
+      - Adobe Target integration
+      - Moveable Ink integration
+      - Braze integration
+      - Enterprise security and compliance
+    contact:
+      url: https://www.uniphore.com/contact/
+notes: >-
+  ActionIQ was acquired by Uniphore in December 2024 for approximately $145
+  million. The product is now offered as Uniphore's Composable Customer Data
+  Platform (CDP Agent). Prospective customers should contact Uniphore for
+  current pricing and packaging information.

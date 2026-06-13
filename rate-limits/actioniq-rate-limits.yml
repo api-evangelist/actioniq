@@ -1,0 +1,47 @@
+name: ActionIQ Rate Limits
+description: >-
+  ActionIQ's publicly available documentation does not disclose specific rate
+  limit values for its REST API or Profile API. As an enterprise platform,
+  rate limits are typically negotiated as part of the enterprise contract and
+  may vary based on plan tier, data volumes, and use case. The following
+  information is based on known integration patterns and general enterprise
+  CDP practices.
+specificationVersion: "0.1"
+rateLimits:
+  - name: Profile API
+    description: >-
+      The ActionIQ Profile API is designed for real-time inbound decisioning
+      and is optimized for sub-millisecond response times. Enterprise rate
+      limits for the Profile API are configured per deployment and governed
+      by contract terms. Organizations requiring high-throughput access for
+      web personalization or call center use cases should negotiate limits
+      during the sales and onboarding process.
+    scope: per-deployment
+    publiclyDisclosed: false
+    notes: >-
+      Designed for real-time use cases requiring millisecond-level response
+      times. Capacity is provisioned at the enterprise level.
+  - name: Data Ingestion REST API
+    description: >-
+      The real-time REST API endpoint for streaming customer events supports
+      push-based ingestion from in-house systems and clickstream providers.
+      Rate limits for the ingestion API are not publicly disclosed and are
+      determined by the enterprise deployment configuration and contract.
+    scope: per-deployment
+    publiclyDisclosed: false
+    notes: >-
+      Supports streaming ingestion for real-time event capture. Throughput
+      is determined per enterprise deployment.
+  - name: Campaign Trigger API
+    description: >-
+      ActionIQ supports outbound campaign triggering via API as part of the
+      ActionIQ Triggers module. Rate limits for triggered campaign sends are
+      governed by the underlying downstream channel (e.g. Braze, email ESPs)
+      and the ActionIQ enterprise deployment configuration.
+    scope: per-deployment
+    publiclyDisclosed: false
+    notes: >-
+      Rate limits for triggered campaigns depend on downstream channel
+      capacity and enterprise contract terms.
+contact:
+  url: https://www.uniphore.com/contact/
