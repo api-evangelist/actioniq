@@ -1,0 +1,78 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "aid": "https://apis.io/vocab/aid",
+    "actioniq": "https://www.actioniq.com/vocab/",
+    "cdp": "https://schema.org/SoftwareApplication",
+    "profile": {
+      "@id": "actioniq:ProfileAPI",
+      "@type": "@id"
+    },
+    "audience": {
+      "@id": "actioniq:Audience",
+      "@type": "@id"
+    },
+    "dataIngestion": {
+      "@id": "actioniq:DataIngestionAPI",
+      "@type": "@id"
+    },
+    "customerIdentity": {
+      "@id": "actioniq:CustomerIdentity",
+      "@type": "@id"
+    },
+    "realTimePersonalization": {
+      "@id": "actioniq:RealTimePersonalization",
+      "@type": "@id"
+    },
+    "campaignOrchestration": {
+      "@id": "actioniq:CampaignOrchestration",
+      "@type": "@id"
+    },
+    "dataActivation": {
+      "@id": "actioniq:DataActivation",
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.actioniq.com",
+      "name": "ActionIQ",
+      "description": "Enterprise customer data platform (CDP) providing real-time personalization, audience management, and data activation. Acquired by Uniphore in December 2024.",
+      "url": "https://www.actioniq.com",
+      "sameAs": [
+        "https://www.uniphore.com/actioniq/",
+        "https://github.com/ActionIQ",
+        "https://twitter.com/actioniqinc",
+        "https://www.linkedin.com/company/actioniq"
+      ],
+      "parentOrganization": {
+        "@type": "Organization",
+        "@id": "https://www.uniphore.com",
+        "name": "Uniphore"
+      }
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://api.actioniq.com/profile",
+      "name": "ActionIQ Profile API",
+      "description": "Real-time access to customer identities, attributes, and audience membership within milliseconds for inbound decisioning use cases.",
+      "documentation": "https://www.actioniq.com/blog/actioniq-profile-api/",
+      "provider": {
+        "@id": "https://www.actioniq.com"
+      },
+      "applicationCategory": "CustomerDataPlatform"
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://api.actioniq.com/ingest",
+      "name": "ActionIQ Data Ingestion API",
+      "description": "Real-time REST API endpoint for streaming customer event data including clickstream events and behavioral data into the ActionIQ platform.",
+      "documentation": "https://www.actioniq.com/library/",
+      "provider": {
+        "@id": "https://www.actioniq.com"
+      },
+      "applicationCategory": "CustomerDataPlatform"
+    }
+  ]
+}
