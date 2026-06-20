@@ -10,7 +10,7 @@ description: >-
   experiences. ActionIQ was acquired by Uniphore in December 2024 and is now
   offered as part of Uniphore's composable CDP platform.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/apis.yml
 created: "2026-06-13"
 modified: "2026-06-13"
@@ -34,7 +34,7 @@ apis:
       support, connecting data warehouse intelligence directly to customer
       experience applications. The API supports integration with personalization
       engines including Adobe Target and Moveable Ink.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.actioniq.com/blog/actioniq-profile-api/
     baseURL: https://api.actioniq.com
     tags:
@@ -55,7 +55,7 @@ apis:
       streaming from in-house systems, enabling businesses to capture real-time
       clickstream events and other behavioral data for immediate use in audience
       segmentation and campaign orchestration.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.actioniq.com/library/
     baseURL: https://api.actioniq.com
     tags:
