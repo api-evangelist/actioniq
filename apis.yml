@@ -67,6 +67,8 @@ apis:
       - type: Documentation
         url: https://www.actioniq.com/library/
 common:
+  - type: DomainSecurity
+    url: security/actioniq-domain-security.yml
   - type: Website
     url: https://www.actioniq.com
   - type: Documentation
