@@ -25,7 +25,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/actioniq.png
 url: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/apis.yml
 created: "2026-06-13"
-modified: "2026-06-13"
+modified: "2026-08-13"
 specificationVersion: "0.19"
 tags:
   - Customer Data Platform
@@ -47,7 +47,7 @@ apis:
       experience applications. The API supports integration with personalization
       engines including Adobe Target and Moveable Ink.
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.actioniq.com/blog/actioniq-profile-api/
+    humanURL: https://www.uniphore.com/actioniq/
     baseURL: https://api.actioniq.com
     tags:
       - Profile
@@ -56,9 +56,7 @@ apis:
       - Customer Data
     properties:
       - type: Documentation
-        url: https://www.actioniq.com/library/
-      - type: Authentication
-        url: https://www.actioniq.com/security/
+        url: https://docs.actioniq.com/actioniq-help-center
   - aid: actioniq:data-ingestion-api
     name: ActionIQ Data Ingestion API
     description: >-
@@ -68,7 +66,7 @@ apis:
       clickstream events and other behavioral data for immediate use in audience
       segmentation and campaign orchestration.
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.actioniq.com/library/
+    humanURL: https://www.uniphore.com/actioniq/
     baseURL: https://api.actioniq.com
     tags:
       - Data Ingestion
@@ -77,30 +75,74 @@ apis:
       - REST
     properties:
       - type: Documentation
-        url: https://www.actioniq.com/library/
+        url: https://docs.actioniq.com/actioniq-help-center
 common:
   - type: DomainSecurity
     url: security/actioniq-domain-security.yml
   - type: Website
     url: https://www.actioniq.com
   - type: Documentation
-    url: https://www.actioniq.com/library/
+    url: https://docs.actioniq.com/actioniq-help-center
   - type: GitHubOrg
     url: https://github.com/ActionIQ
   - type: LinkedIn
     url: https://www.linkedin.com/company/actioniq
   - type: Blog
     url: https://www.actioniq.com/blog/
-  - type: Pricing
-    url: https://www.g2.com/products/actioniq/pricing
   - type: X
     url: https://twitter.com/actioniqinc
+  - type: Support
+    url: https://www.uniphore.com/support/
+  - type: TermsOfService
+    url: https://www.uniphore.com/legal/terms-of-use/
+  - type: PrivacyPolicy
+    url: https://www.uniphore.com/legal/privacy-policy/
   - type: Plans
     url: plans/actioniq-plans-pricing.yml
   - type: RateLimits
     url: rate-limits/actioniq-rate-limits.yml
   - type: FinOps
     url: finops/actioniq-finops.yml
+  - type: LLMsTxt
+    url: llms/actioniq-llms.txt
+  - type: TrustCenter
+    url: security/actioniq-trust-center.yml
+  - type: Compliance
+    url: security/actioniq-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/actioniq-vulnerability-disclosure.yml
+  - type: Security
+    url: security/actioniq-vulnerability-disclosure.yml
+  - type: Conformance
+    url: conformance/actioniq-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/actioniq-lifecycle.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    The ActionIQ API reference is a GitBook space at
+    docs.actioniq.com/actioniq-help-center gated by an Auth0 visitor-auth
+    integration — every path 307s to integrations.gitbook.com, then 302s to
+    login.actioniq.com/authorize and ends on an Auth0 error page — while the
+    live production host api.actioniq.com answers 403 Forbidden from AWS API
+    Gateway on every path, so no OpenAPI, error catalog, or rate-limit header
+    could be read anonymously.
+  evidence:
+    - url: https://docs.actioniq.com/actioniq-help-center
+      status: 400
+    - url: https://api.actioniq.com/openapi.json
+      status: 403
+    - url: https://www.actioniq.com/library/
+      status: 301
+    - url: https://status.actioniq.com/
+      status: 200
+  checked: '2026-08-13'
