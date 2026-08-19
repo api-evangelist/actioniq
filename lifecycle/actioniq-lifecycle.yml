@@ -1,0 +1,76 @@
+generated: '2026-08-13'
+method: probed
+source: >-
+  live probes of status.actioniq.com, docs.actioniq.com, api.actioniq.com and
+  the Uniphore parent-brand surfaces
+name: ActionIQ API Lifecycle
+description: >-
+  ActionIQ publishes no public API versioning policy, no deprecation policy, and
+  no reachable status page. The Atlassian Statuspage instance that ActionIQ once
+  operated still resolves but has been switched OFF: status.actioniq.com
+  redirects to actioniq1.statuspage.io/inactive and renders "ActionIQ CXHub
+  Status - Page Inactive … can only be viewed by team members". Everything else
+  that would carry a lifecycle policy — the GitBook help center — sits behind
+  Auth0 visitor authentication.
+status_page:
+  exists: false
+  url: https://status.actioniq.com/
+  resolved_to: https://actioniq1.statuspage.io/inactive
+  http_status: 200
+  platform: Atlassian Statuspage
+  public: false
+  note: >-
+    Page is INACTIVE and team-members-only. The status API
+    (/api/v2/summary.json) 302s to the same inactive instance and returns no
+    component or incident data. No StatusPage pointer is emitted in apis.yml,
+    because there is no status surface a customer or an agent can read.
+versioning:
+  policy_published: false
+  scheme: unknown
+  note: >-
+    No public versioning policy. The apis.yml base URL https://api.actioniq.com
+    is live (AWS API Gateway) but returns 403 Forbidden anonymously on every
+    path, so no version prefix could be observed.
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  deprecation_header: unknown
+  rfc8594: unknown
+  deprecated_operations: []
+  note: >-
+    No deprecation policy found and no OpenAPI in the repo from which to derive
+    deprecated operations. No Deprecation pointer is emitted.
+sla:
+  published: false
+  note: SLA terms are contracted; nothing is published publicly.
+changelog:
+  published: false
+  note: >-
+    Release notes live inside the gated help center. The ActionIQ blog, which
+    previously carried product announcements, 301-redirects to
+    https://www.uniphore.com/actioniq/ with no resolvable feed.
+company_lifecycle:
+  event: acquisition
+  acquirer: Uniphore
+  date: '2024-12'
+  effect: >-
+    The standalone ActionIQ web presence has been retired. actioniq.com and
+    www.actioniq.com 301-redirect to www.uniphore.com/actioniq/; the product is
+    sold as Uniphore's CDP Agent. The API host api.actioniq.com and the help
+    center docs.actioniq.com remain live for existing customers.
+x-evidence:
+  fetched: '2026-08-13'
+  urls:
+    - url: https://status.actioniq.com/
+      status: 200
+      note: Redirects to actioniq1.statuspage.io/inactive — "Page Inactive".
+    - url: https://status.actioniq.com/api/v2/summary.json
+      status: 302
+    - url: https://api.actioniq.com/
+      status: 403
+    - url: https://docs.actioniq.com/actioniq-help-center
+      status: 400
+      note: Auth0 visitor-auth handshake ends on an error page.
+    - url: https://actioniq.com/
+      status: 301
+      note: Location https://www.uniphore.com/actioniq/

@@ -1,0 +1,50 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  npm registry search, PyPI, RubyGems, crates.io, and the ActionIQ and
+  ActionIQ-OSS GitHub organizations
+name: ActionIQ Client Packages
+description: >-
+  No first-party ActionIQ API client library was found in any public package
+  registry. ActionIQ ships an enterprise REST API (Profile API, data-ingestion
+  API) but distributes no SDK: the documented integration paths are direct HTTP,
+  SFTP/S3/GCS file transfer, JDBC pull, and pre-built destination connectors.
+  Recorded as an honest zero, not an unchecked gap.
+package_count: 0
+official_package_count: 0
+packages: []
+registries_checked:
+  - registry: npm
+    endpoint: https://registry.npmjs.org/-/v1/search?text=actioniq
+    status: 200
+    result: >-
+      No ActionIQ API client. The only ActionIQ-authored packages published are
+      React UI utilities from the ActionIQ-OSS org — react-child-validator
+      (0.6.0, 2019-11-13) and react-resizable-bar (0.0.2, 2015-07-13) — neither
+      of which wraps the ActionIQ API. Not recorded as client packages.
+  - registry: pypi
+    endpoint: https://pypi.org/pypi/actioniq/json
+    status: 404
+    result: No package.
+  - registry: rubygems
+    endpoint: https://rubygems.org/api/v1/search.json?query=actioniq
+    status: 200
+    result: Empty result set.
+  - registry: crates.io
+    endpoint: https://crates.io/api/v1/crates?q=actioniq
+    status: 200
+    result: Empty result set.
+  - registry: github
+    endpoint: https://api.github.com/orgs/ActionIQ/repos
+    status: 200
+    result: >-
+      Both public orgs (ActionIQ and ActionIQ-OSS) contain only data-infrastructure
+      forks and internal build tooling — Spark, Parquet, Finagle, Scrooge, ZIO,
+      Luigi, Pants, Terraform modules. No API SDK, no CLI, no .proto, no OpenAPI.
+      Most repos are archived; the newest non-fork activity is a Retool Terraform
+      module (2025-07-29).
+notes: >-
+  Because package_count is 0, no `SDKs` pointer is emitted in apis.yml — the
+  pointer would assert a client library ActionIQ does not publish. If Uniphore
+  ships an SDK for the ActionIQ-derived CDP Agent, it was not published to any
+  public registry as of the date above.

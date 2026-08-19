@@ -1,3 +1,13 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  https://www.uniphore.com/actioniq/ (HTTP 200) and
+  https://www.uniphore.com/products/marketing-ai/cdp-agent/ (HTTP 200) — neither
+  publishes a price, a tier table, or a plan page; both route to contact-sales.
+  actioniq.com/pricing does not exist: the apex 301-redirects every path to the
+  Uniphore landing page.
+plan_count: 0
+publicly_priced: false
 name: ActionIQ Plans and Pricing
 description: >-
   ActionIQ uses an enterprise-tier, custom pricing model based on platform fees

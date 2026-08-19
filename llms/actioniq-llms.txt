@@ -1,0 +1,76 @@
+# ActionIQ
+
+> ActionIQ is an enterprise customer data platform (CDP) providing a REST API for customer
+> profiles, audience building, campaign orchestration, and data activation across marketing
+> channels. ActionIQ was acquired by Uniphore in December 2024 and is now sold as Uniphore's
+> composable CDP (CDP Agent). The standalone actioniq.com site 301-redirects to
+> https://www.uniphore.com/actioniq/.
+
+<!--
+generated: 2026-08-13
+method: generated
+source: apis.yml + repo artifacts, verified against live probes on 2026-08-13.
+         ActionIQ does not publish an llms.txt: https://www.actioniq.com/llms.txt -> HTTP 404.
+         This file is authored by API Evangelist from the catalog profile, not served by the provider.
+-->
+
+## What an agent can and cannot reach
+
+- The production API host **https://api.actioniq.com** is live but answers **HTTP 403 Forbidden**
+  (AWS API Gateway) on every path anonymously. Access requires credentials issued under an
+  enterprise contract.
+- The documentation, **https://docs.actioniq.com/actioniq-help-center**, is a GitBook space gated
+  by Auth0 visitor authentication. Unauthenticated requests are redirected to
+  `login.actioniq.com/authorize` and end on an error page. There is no public API reference.
+- **No machine-readable contract is published.** No OpenAPI, Swagger, AsyncAPI, GraphQL SDL,
+  Postman collection, `.proto`, MCP server, or A2A agent card was found on any ActionIQ host.
+- **No SDK.** Nothing first-party on npm, PyPI, RubyGems, or crates.io. The public GitHub orgs
+  (ActionIQ, ActionIQ-OSS) hold only data-infrastructure forks and internal build tooling.
+- The Atlassian status page **status.actioniq.com** has been deactivated ("Page Inactive",
+  team-members only).
+
+## APIs
+
+- [ActionIQ Profile API](https://www.actioniq.com/blog/actioniq-profile-api/): Real-time access to
+  customer identities, attributes, and audience membership within milliseconds. Powers inbound
+  decisioning — web personalization, call center support — connecting data-warehouse intelligence
+  to customer-experience applications. Documented integrations include Adobe Target and Moveable
+  Ink. Base URL `https://api.actioniq.com`.
+- [ActionIQ Data Ingestion API](https://www.actioniq.com/library/): Real-time REST endpoint for
+  streaming customer event data into the platform. Supports push-based streaming from in-house
+  systems for clickstream and behavioral capture, feeding audience segmentation and campaign
+  orchestration. Base URL `https://api.actioniq.com`.
+
+Non-API integration paths ActionIQ documents alongside the REST surface: SFTP, Amazon S3 and
+Google Cloud Storage file transfer, and JDBC pull-based direct query against the customer's
+warehouse.
+
+## Access
+
+- Pricing: enterprise, custom, not publicly disclosed. Contact-sales only.
+- Onboarding: approval required. No self-service signup, no free trial, no public sandbox.
+- Rate limits: not published. Provisioned per enterprise deployment.
+
+## Security and compliance
+
+Published on the parent brand's trust center, because ActionIQ is now part of Uniphore.
+
+- [Uniphore Trust Center](https://trust.uniphore.com/): SOC 2 Type 2, ISO/IEC 27001:2022,
+  ISO/IEC 27701:2019, ISO/IEC 27017:2015, ISO/IEC 27018:2019, PCI DSS v4.0.1, HIPAA, GDPR,
+  NIST CSF, CASA Tier 2, EU AI Act, FIPS 140-2, FIPS 140-3.
+- [Uniphore Security](https://www.uniphore.com/security/): network vulnerability scanning, annual
+  third-party penetration tests, patch management, SIEM.
+- Responsible disclosure: uniphore_trust@uniphore.com (via the trust center). No security.txt is
+  served on any ActionIQ or Uniphore host; no bug-bounty program.
+
+## Company
+
+- [ActionIQ on Uniphore](https://www.uniphore.com/actioniq/)
+- [Uniphore CDP Agent](https://www.uniphore.com/products/marketing-ai/cdp-agent/)
+- [GitHub organization](https://github.com/ActionIQ)
+- [LinkedIn](https://www.linkedin.com/company/actioniq)
+
+## Optional
+
+- [API Evangelist profile](https://apis.io/provider/actioniq/)
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/apis.yml)

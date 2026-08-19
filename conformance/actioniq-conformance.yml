@@ -1,0 +1,128 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  https://trust.uniphore.com/ and https://www.uniphore.com/security/ for the
+  compliance claims; live probes of api.actioniq.com and docs.actioniq.com for
+  the API-standards rows
+name: ActionIQ Conformance
+description: >-
+  Cross-cutting standards conformance for ActionIQ. The organizational and
+  regulatory rows are asserted by the parent brand: ActionIQ was acquired by
+  Uniphore in December 2024, actioniq.com 301-redirects to
+  www.uniphore.com/actioniq/, and the certifications are published on Uniphore's
+  SafeBase trust center. The API-standards rows are all UNKNOWN rather than false
+  — ActionIQ publishes no OpenAPI, and both the API host (403) and the help
+  center (Auth0-gated) are unreadable anonymously, so nothing could be observed
+  either way. An unknown is recorded as conforms:false with the reason stated;
+  it is an absence of evidence, not evidence of absence.
+conformance:
+  - id: soc2-type2
+    name: SOC 2 Type 2
+    conforms: true
+    evidence: https://trust.uniphore.com/
+    note: Published on the Uniphore trust center (parent brand).
+  - id: iso-27001
+    name: ISO/IEC 27001:2022
+    conforms: true
+    evidence: https://trust.uniphore.com/
+  - id: iso-27701
+    name: ISO/IEC 27701:2019
+    conforms: true
+    evidence: https://trust.uniphore.com/
+  - id: iso-27017
+    name: ISO/IEC 27017:2015
+    conforms: true
+    evidence: https://trust.uniphore.com/
+  - id: iso-27018
+    name: ISO/IEC 27018:2019
+    conforms: true
+    evidence: https://trust.uniphore.com/
+  - id: pci-dss
+    name: PCI DSS v4.0.1
+    conforms: true
+    evidence: https://trust.uniphore.com/
+  - id: hipaa
+    name: HIPAA
+    conforms: true
+    evidence: https://trust.uniphore.com/
+  - id: gdpr
+    name: GDPR
+    conforms: true
+    evidence: https://trust.uniphore.com/
+  - id: nist-csf
+    name: NIST Cybersecurity Framework
+    conforms: true
+    evidence: https://trust.uniphore.com/
+  - id: casa-tier2
+    name: CASA Tier 2
+    conforms: true
+    evidence: https://trust.uniphore.com/
+  - id: eu-ai-act
+    name: EU AI Act
+    conforms: true
+    evidence: https://trust.uniphore.com/
+  - id: fips-140-2
+    name: FIPS 140-2
+    conforms: true
+    evidence: https://trust.uniphore.com/
+  - id: fips-140-3
+    name: FIPS 140-3
+    conforms: true
+    evidence: https://trust.uniphore.com/
+  - id: openapi
+    name: OpenAPI
+    conforms: false
+    evidence: >-
+      No OpenAPI or Swagger document found. Probed /openapi.json, /openapi.yaml,
+      /swagger.json, /v1/openapi.json, /api-docs, /docs and /redoc on
+      api.actioniq.com — all HTTP 403 — and on www.actioniq.com, which answers
+      200 with a marketing HTML shell for any path. docs.actioniq.com is
+      Auth0-gated (400).
+  - id: oauth2
+    name: OAuth 2.0
+    conforms: false
+    evidence: >-
+      Unknown. No securityScheme to read and no anonymous authorization-server
+      metadata: /.well-known/oauth-authorization-server is 403 on
+      api.actioniq.com. Note that the ActionIQ help center and its GitBook
+      visitor-auth flow are fronted by Auth0 (login.actioniq.com/authorize),
+      which is a documentation-access flow, not the API's auth scheme.
+  - id: oidc
+    name: OpenID Connect
+    conforms: false
+    evidence: >-
+      Unknown. /.well-known/openid-configuration is 403 on api.actioniq.com and
+      returns an HTML shell on www.actioniq.com.
+  - id: rfc9457
+    name: RFC 9457 Problem Details
+    conforms: false
+    evidence: >-
+      Unknown. No spec and no readable error reference. The one anonymous
+      response observable from api.actioniq.com is an AWS API Gateway
+      ForbiddenException with an empty body, which is gateway behavior rather
+      than the API's own error envelope.
+  - id: idempotency
+    name: Idempotency keys
+    conforms: false
+    evidence: Unknown — no spec and no readable documentation.
+  - id: pagination
+    name: Documented pagination
+    conforms: false
+    evidence: Unknown — no spec and no readable documentation.
+  - id: asyncapi
+    name: AsyncAPI
+    conforms: false
+    evidence: >-
+      No AsyncAPI document found. ActionIQ documents a push/streaming ingestion
+      endpoint, but the event catalog is inside the gated help center.
+x-evidence:
+  fetched: '2026-08-13'
+  urls:
+    - url: https://trust.uniphore.com/
+      status: 200
+    - url: https://api.actioniq.com/openapi.json
+      status: 403
+    - url: https://api.actioniq.com/.well-known/openid-configuration
+      status: 403
+    - url: https://docs.actioniq.com/actioniq-help-center
+      status: 400

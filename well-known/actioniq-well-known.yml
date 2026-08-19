@@ -1,0 +1,118 @@
+generated: '2026-08-13'
+method: probed
+source: live HTTP probes of every ActionIQ host named in apis.yml
+name: ActionIQ .well-known Probe
+description: >-
+  Probe of the standard /.well-known/ discovery paths across every host ActionIQ
+  names in apis.yml. NO document was found. The apex and www hosts are a
+  WordPress/Cloudflare front end that 301-redirects every path to
+  https://www.uniphore.com/actioniq/ and answers 200 with the same 145,841-byte
+  marketing HTML shell for any /.well-known/* path — an SPA/CMS catch-all, not a
+  document, and therefore recorded as a MISS. The API host answers 403 Forbidden
+  from AWS API Gateway on every path including /.well-known/*. No WellKnown or
+  SecurityTxt pointer is emitted from this file, because nothing here is served.
+result: no-documents-found
+hit_count: 0
+hosts:
+  - host: www.actioniq.com
+    note: >-
+      Every /.well-known/* path returns HTTP 200 carrying the identical
+      145,841-byte HTML marketing shell (the Uniphore ActionIQ landing page).
+      This is a catch-all, not a document. Treated as a miss.
+    paths:
+      - path: /.well-known/security.txt
+        status: 404
+        hit: false
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 200
+        hit: false
+        content_type: text/html
+        note: HTML marketing shell, not an OpenID configuration document.
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        hit: false
+        content_type: text/html
+        note: HTML marketing shell, not an authorization-server metadata document.
+        file: null
+      - path: /.well-known/api-catalog
+        status: 200
+        hit: false
+        content_type: text/html
+        note: HTML marketing shell, not an RFC 9727 api-catalog document.
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        hit: false
+        content_type: text/html
+        note: HTML marketing shell, not JSON.
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 200
+        hit: false
+        content_type: text/html
+        note: >-
+          HTML marketing shell, not an A2A AgentCard. No AgentCard pointer is
+          emitted — this is the dominant false positive the pipeline warns about.
+        file: null
+      - path: /.well-known/agent.json
+        status: 200
+        hit: false
+        content_type: text/html
+        note: HTML marketing shell, not an A2A AgentCard (legacy path).
+        file: null
+  - host: actioniq.com
+    note: Apex 301-redirects to https://www.uniphore.com/actioniq/.
+    paths:
+      - path: /.well-known/security.txt
+        status: 404
+        hit: false
+        file: null
+  - host: api.actioniq.com
+    note: >-
+      Production API host. AWS API Gateway behind CloudFront; every path returns
+      403 ForbiddenException with an empty body. The host is live and correct,
+      but nothing is readable anonymously.
+    paths:
+      - path: /.well-known/security.txt
+        status: 403
+        hit: false
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 403
+        hit: false
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+        hit: false
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 403
+        hit: false
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 403
+        hit: false
+        file: null
+      - path: /.well-known/agent.json
+        status: 403
+        hit: false
+        file: null
+  - host: docs.actioniq.com
+    note: >-
+      GitBook help center gated by an Auth0 visitor-authentication integration.
+      Every path 307s to integrations.gitbook.com then 302s to
+      login.actioniq.com/authorize and ends on an Auth0 error page (HTTP 400).
+    paths:
+      - path: /.well-known/security.txt
+        status: 400
+        hit: false
+        file: null
+notes: >-
+  ActionIQ was acquired by Uniphore in December 2024 and the standalone
+  actioniq.com web presence has been folded into www.uniphore.com/actioniq/.
+  Parent-company discovery surfaces were also checked: www.uniphore.com serves
+  an llms.txt (HTTP 200) but 404s on /.well-known/security.txt, and
+  www.uniphore.com/.well-known/agent-card.json returns 404. Those belong to the
+  Uniphore profile, not to this one.

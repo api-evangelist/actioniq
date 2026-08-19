@@ -1,3 +1,14 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  No published limits found. The API reference lives in the Auth0-gated GitBook
+  help center (https://docs.actioniq.com/actioniq-help-center -> HTTP 400 after
+  the visitor-auth handshake) and the API host answers HTTP 403 anonymously
+  (https://api.actioniq.com/), so no rate-limit response headers could be
+  observed either.
+limit_count: 0
+published_limits: false
+response_headers_observed: []
 name: ActionIQ Rate Limits
 description: >-
   ActionIQ's publicly available documentation does not disclose specific rate
