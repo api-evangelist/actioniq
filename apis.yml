@@ -71,6 +71,11 @@ apis:
     tags:
       - Data Ingestion
       - Streaming
+      - Event
+      - REST
+    tags_raw:
+      - Data Ingestion
+      - Streaming
       - Events
       - REST
     properties:
