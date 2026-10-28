@@ -64,30 +64,115 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ActionIQ is an enterprise customer data platform (CDP) that provides a REST API for managing customer profiles, building audiences, orchestrating campaigns, and activating data across marketing channels. The platform offers a Profile API for real-time personalization, enabling businesses to access customer identities, attributes, and audience membership within milliseconds to power web personalization, call center decisioning, and real-time customer experiences.
+ActionIQ is an enterprise customer data platform (CDP) that provides a REST API for managing customer profiles, building audiences, orchestrating campaigns, and activating data across marketing channels. The platform offers a Profile API for real-time personalization, enabling businesses to access customer identities, attributes, and audience membership within milliseconds to power web personalization, call center decisioning, and real-time customer experiences. ActionIQ was acquired by Uniphore in December 2024 and is now offered as part of Uniphore's composable CDP platform.
 
-ActionIQ was acquired by Uniphore in December 2024 and is now offered as part of Uniphore's composable CDP platform under the branding "CDP Agent."
+**Areas:** Customer Data Platform · CDP · Audience Management · Real-Time Personalization · Marketing Orchestration · Data Activation · Enterprise · REST API
 
-## APIs
+## ActionIQ on APIs.io
 
-- **Profile API** — Real-time access to customer identities, attributes, and audience membership for inbound decisioning and personalization
-- **Data Ingestion API** — Push-based REST endpoint for streaming real-time customer events into the platform
+Everything profiled for ActionIQ is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/actioniq/](https://apis.io/providers/actioniq/)** — or go straight to one of the APIs or properties below.
 
-## Resources
+### APIs (2)
+
+- [ActionIQ Profile API](https://apis.io/apis/actioniq/profile-api/) — The ActionIQ Profile API provides real-time access to customer identities, attributes, and audience membership within milliseconds. It powers inbound…
+- [ActionIQ Data Ingestion API](https://apis.io/apis/actioniq/data-ingestion-api/) — ActionIQ provides a real-time REST API endpoint for streaming customer event data into the platform. The ingestion API supports push-based streaming from…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Actioniq Context](https://apis.io/jsonld/actioniq/actioniq-context/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Actioniq Domain Security](https://apis.io/security/actioniq/actioniq-domain-security/)
+- [Actioniq Trust Center](https://apis.io/security/actioniq/actioniq-trust-center/)
+- [Actioniq Vulnerability Disclosure](https://apis.io/security/actioniq/actioniq-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Actioniq Plans Pricing](https://apis.io/plans/actioniq/actioniq-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Actioniq Rate Limits](https://apis.io/rate-limits/actioniq/actioniq-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Actioniq Finops](https://apis.io/finops/actioniq/actioniq-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.actioniq.com)
-- [Library / Documentation](https://www.actioniq.com/library/)
-- [GitHub Organization](https://github.com/ActionIQ)
-- [LinkedIn](https://www.linkedin.com/company/actioniq)
-- [X / Twitter](https://twitter.com/actioniqinc)
+- [Documentation](https://docs.actioniq.com/actioniq-help-center)
+- [Support](https://www.uniphore.com/support/)
+- [Blog](https://www.actioniq.com/blog/)
+- [Terms of service](https://www.uniphore.com/legal/terms-of-use/)
+- [Privacy policy](https://www.uniphore.com/legal/privacy-policy/)
 
-## Catalog Files
+## API Evangelist rating
 
-- [apis.yml](apis.yml) — APIs.json provider index
-- [plans/actioniq-plans-pricing.yml](plans/actioniq-plans-pricing.yml) — Pricing plans
-- [rate-limits/actioniq-rate-limits.yml](rate-limits/actioniq-rate-limits.yml) — Rate limit documentation
-- [finops/actioniq-finops.yml](finops/actioniq-finops.yml) — FinOps framework guidance
+**Kin Score 28.9** — thin · rubric 0.24.0 · scored 2026-10-17
 
-## Maintainer
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 6.7 |
+| Contract governance | 18.2 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 57.9 |
 
-Kin Lane — kin@apievangelist.com
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/actioniq/](https://apis.io/providers/actioniq/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ActionIQ: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/actioniq/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
