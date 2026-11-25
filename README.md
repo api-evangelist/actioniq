@@ -91,27 +91,27 @@ Linked-data contexts for the provider's vocabulary.
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Actioniq Domain Security](https://apis.io/security/actioniq/actioniq-domain-security/)
-- [Actioniq Trust Center](https://apis.io/security/actioniq/actioniq-trust-center/)
-- [Actioniq Vulnerability Disclosure](https://apis.io/security/actioniq/actioniq-vulnerability-disclosure/)
+- [ActionIQ Domain Security](https://apis.io/security/actioniq/actioniq-domain-security/)
+- [ActionIQ Trust Center](https://apis.io/security/actioniq/actioniq-trust-center/)
+- [ActionIQ Vulnerability Disclosure](https://apis.io/security/actioniq/actioniq-vulnerability-disclosure/)
 
 #### Plans and pricing (1)
 
 Published plans, tiers and prices.
 
-- [Actioniq Plans Pricing](https://apis.io/plans/actioniq/actioniq-plans-pricing/)
+- [ActionIQ Plans Pricing](https://apis.io/plans/actioniq/actioniq-plans-pricing/)
 
 #### Rate limits (1)
 
 Published request limits.
 
-- [Actioniq Rate Limits](https://apis.io/rate-limits/actioniq/actioniq-rate-limits/)
+- [ActionIQ Rate Limits](https://apis.io/rate-limits/actioniq/actioniq-rate-limits/)
 
 #### FinOps (1)
 
 What the API costs to run, by operation.
 
-- [Actioniq Finops](https://apis.io/finops/actioniq/actioniq-finops/)
+- [ActionIQ Finops](https://apis.io/finops/actioniq/actioniq-finops/)
 
 ## Where to find this API
 
@@ -126,16 +126,16 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 28.9** — thin · rubric 0.24.0 · scored 2026-10-17
+**Kin Score 26.7** — thin · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
 | Discoverability | 73.2 |
 | Contract quality | 6.7 |
 | Contract governance | 18.2 |
-| Operational transparency | 15.8 |
-| Developer ergonomics | 9.5 |
-| Access clarity | 57.9 |
+| Operational transparency | 14.3 |
+| Developer ergonomics | 10.7 |
+| Access clarity | 46.8 |
 
 **Agent readiness 2.5** — human-only
 
@@ -160,6 +160,12 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
 **Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
 
